@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}[spanish]
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -11,11 +11,11 @@
 \usepackage{mathtools}
 \usepackage{stackrel}
 \usepackage{multicol}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \newcounter{neq}
 \providecommand{\abs}[1]{\lvert#1\rvert}
 \newcommand{\SIGMA}{\Sigma^{\ast}}
-\newcommand{\N}{\noindent}
+\newcommand{\PN}{\par\noindent}
 
 \title{Resumen Física}
 
@@ -25,4 +25,58 @@
 		\large Agustín Curto
 	\end{center}
 
+	\section*{Práctico 0: Vectores}
+		\PN Sean $\vec{A} = A_{x} \hat{i} + A_{y} \hat{j}$, $\;$ $\vec{B} = B_{x} \hat{i} + B_{y} \hat{j}$ $\;$ y $\;$
+			$\alpha$ un escalar.
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Suma: $\vec{A} + \vec{B} = (A_{x} + B_{x}) \hat{i} + (A_{y} + B_{y}) \hat{j}$
+				\item Resta: $\vec{A} - \vec{B} = (A_{x} - B_{x}) \hat{i} + (A_{y} - B_{y}) \hat{j}$
+				\item Multiplicación por un escalar: $\alpha A_{x} \hat{i} + \alpha A_{y} \hat{j}$
+				\item Producto escalar (punto): $\vec{A} \cdot \vec{B} = AB \cos(\theta)$
+				\item Producto vectorial (cruz): $\vec{A} \times \vec{B} = A_{x} B_{x} \hat{i}\hat{i} + A_{x} B_{y}
+					\hat{i}\hat{j} + A_{y} B_{x} \hat{j}\hat{i} + A_{y} B_{y} \hat{j}\hat{j}$
+					\PN $\abs{\vec{A} \times \vec{B}} = AB \sin(\theta)$
+				\item Representación polar: Sea $r$ la norma del vector entonces:
+					\begin{eqnarray*}
+						a_{x} = r \cos(\theta) \\
+						a_{y} = r \sin(\theta) \\
+						r = \sqrt(a_{x}^{2} + a_{y}^{2})
+					\end{eqnarray*}
+			\end{itemize}
+		\end{multicols}
+
+	\section*{Práctico 1: Cinemática}
+		\begin{itemize}
+			\item Velocidad media: $\overline{v} = \frac{\Delta x}{\Delta t}$
+			\item Aceleración media: $\overline{a} = \frac{\Delta v}{\Delta t}$
+			\item Velocidad: $v = \lim_{\Delta t \rightarrow 0} \ \frac{\Delta x}{\Delta t} = \frac{dx}{dt}$
+		\end{itemize}
+
+		\subsubsection*{Ecuaciones de movimiento:}
+			\begin{multicols}{3}
+				\begin{itemize}
+					\item Posición: $x(t) = x_{0} + v_{0} t + \frac{a}{2} t^{2}$
+					\item Velocidad: $v(t) = v_{0} + at$
+					\item Aceleración: $a = cte$
+				\end{itemize}
+			\end{multicols}
+
+	\section*{Práctico 2: Movimiento en el plano}
+		\subsubsection*{Ecuaciones de movimiento:}
+			\begin{itemize}
+				\item Posición: $\vec{r}(t) = x(t) + y(t)$
+				\item Velocidad: $\vec{v}(t) = v_{x}(t) \hat{i} + v_{y}(t) \hat{j}$
+				\item Aceleración: $\vec{a}(t) = a_{x}(t) \hat{i} + a_{y}(t) \hat{j}$
+			\end{itemize}
+
+	\section*{Práctico 3: Movimiento circular}
+		\begin{itemize}
+			\item
+		\end{itemize}
+
+	\section*{Práctico 4: Dinámica}
+		\begin{itemize}
+			\item
+		\end{itemize}
 \end{document}
