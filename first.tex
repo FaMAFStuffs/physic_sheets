@@ -25,19 +25,36 @@
 		\large Agustín Curto
 	\end{center}
 
-	\section*{Práctico 0: Vectores}
-		\PN Sean $\vec{A} = A_{x} \hat{i} + A_{y} \hat{j}$, $\;$ $\vec{B} = B_{x} \hat{i} + B_{y} \hat{j}$ $\;$ y $\;$
-			$\alpha$ un escalar.
+	\section*{\underline{Práctico 0:} Vectores}
+		\PN Sean $\vec{A} = A_{x} \hat{i} + A_{y} \hat{j} + A_{z} \hat{k}$, $\;$ $\vec{B} = B_{x} \hat{i} + B_{y} \hat{j} +
+			B_{z} \hat{k}$, $\;$ $\theta = \vec{A} \angle \vec{B}$, $\;$ $A$ y $B$ los módulos de $\vec{A}, \vec{B}$
+			respectivamente y $\alpha$ un escalar.
 		\begin{multicols}{2}
 			\begin{itemize}
-				\item Suma: $\vec{A} + \vec{B} = (A_{x} + B_{x}) \hat{i} + (A_{y} + B_{y}) \hat{j}$
-				\item Resta: $\vec{A} - \vec{B} = (A_{x} - B_{x}) \hat{i} + (A_{y} - B_{y}) \hat{j}$
-				\item Multiplicación por un escalar: $\alpha A_{x} \hat{i} + \alpha A_{y} \hat{j}$
+				\item Suma: $\vec{A} + \vec{B} = (A_{x} + B_{x}) \hat{i} + (A_{y} + B_{y}) \hat{j} + (A_{z} + B_{z}) \hat{k}$
+				\item Resta: $\vec{A} - \vec{B} = (A_{x} - B_{x}) \hat{i} + (A_{y} - B_{y}) \hat{j} + (A_{z} - B_{z}) \hat{k}$
+				\item Multiplicación por un escalar: $\alpha A_{x} \hat{i} + \alpha A_{y} \hat{j} + \alpha A_{z} \hat{k}$
 				\item Producto escalar (punto): $\vec{A} \cdot \vec{B} = AB \cos(\theta)$
-				\item Producto vectorial (cruz): $\vec{A} \times \vec{B} = A_{x} B_{x} \hat{i}\hat{i} + A_{x} B_{y}
-					\hat{i}\hat{j} + A_{y} B_{x} \hat{j}\hat{i} + A_{y} B_{y} \hat{j}\hat{j}$
-					\PN $\abs{\vec{A} \times \vec{B}} = AB \sin(\theta)$
-				\item Representación polar: Sea $r$ la norma del vector entonces:
+				\item Producto vectorial (cruz):
+					\PN \underline{Forma 1:}
+					\[
+						\vec{A} \times \vec{B} = (A_{y}B_{z} - A_{z}B_{y}) \hat{i} + (A_{x}B_{z} - A_{z}B_{x}) \hat{j} +
+						(A_{x}B_{y} - A_{y}B_{x}) \hat{k}
+					\]
+
+					\PN \underline{Forma 2:}
+						\[
+							\vec{A} \times \vec{B} = det
+								\left(
+								  \begin{bmatrix}
+								    \hat{i} & \hat{j} & \hat{k} \\
+								    A_{x} & A_{y} & A_{z} \\
+								    B_{x} & B_{y} & B_{z}
+								  \end{bmatrix}
+								\right)
+						\]
+					\PN Además: $\abs{\vec{A} \times \vec{B}} = AB \sin(\theta)$
+				\item Representación polar:
 					\begin{eqnarray*}
 						a_{x} = r \cos(\theta) \\
 						a_{y} = r \sin(\theta) \\
@@ -46,19 +63,20 @@
 			\end{itemize}
 		\end{multicols}
 
-	\section*{Práctico 1: Cinemática}
-		\begin{itemize}
-			\item Velocidad media: $\overline{v} = \frac{\Delta x}{\Delta t}$
-			\item Aceleración media: $\overline{a} = \frac{\Delta v}{\Delta t}$
-			\item Velocidad: $v = \lim_{\Delta t \rightarrow 0} \ \frac{\Delta x}{\Delta t} = \frac{dx}{dt}$
-		\end{itemize}
+	\section*{\underline{Práctico 1:} Cinemática}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Velocidad media: $\overline{v} = \frac{\Delta x}{\Delta t}$
+				\item Aceleración media: $\overline{a} = \frac{\Delta v}{\Delta t}$
+			\end{itemize}
+		\end{multicols}
 
 		\subsubsection*{Ecuaciones de movimiento:}
 			\begin{multicols}{3}
 				\begin{itemize}
-					\item Posición: $x(t) = x_{0} + v_{0} t + \frac{a}{2} t^{2}$
-					\item Velocidad: $v(t) = v_{0} + at$
-					\item Aceleración: $a = cte$
+					\item \underline{Posición:} $x(t) = x_{0} + v_{0} t + \frac{a}{2} t^{2}$
+					\item \underline{Velocidad:} $v(t) = v_{0} + at$
+					\item \underline{Aceleración:} $a = cte$
 				\end{itemize}
 			\end{multicols}
 
