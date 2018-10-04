@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}[spanish]
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -80,21 +80,62 @@
 				\end{itemize}
 			\end{multicols}
 
-	\section*{Práctico 2: Movimiento en el plano}
+	\section*{\underline{Práctico 2:} Movimiento en el plano}
+		\begin{itemize}
+			\item Trayectoria: Dadas $x(t)$ y $y(t)$, la ecuación de la trayectoria es $y(x)$.
+		\end{itemize}
+
 		\subsubsection*{Ecuaciones de movimiento:}
 			\begin{itemize}
-				\item Posición: $\vec{r}(t) = x(t) + y(t)$
-				\item Velocidad: $\vec{v}(t) = v_{x}(t) \hat{i} + v_{y}(t) \hat{j}$
-				\item Aceleración: $\vec{a}(t) = a_{x}(t) \hat{i} + a_{y}(t) \hat{j}$
+				\item \underline{Posición:} $\vec{r}(t) = x(t) \hat{i} + y(t) \hat{j}$
+				\item \underline{Velocidad:} $\vec{v}(t) = v_{x}(t) \hat{i} + v_{y}(t) \hat{j}$
+				\item \underline{Aceleración:} $\vec{a}(t) = a_{x}(t) \hat{i} + a_{y}(t) \hat{j}$
 			\end{itemize}
 
-	\section*{Práctico 3: Movimiento circular}
-		\begin{itemize}
-			\item
-		\end{itemize}
+	\section*{\underline{Práctico 3:} Movimiento circular}
+		\PN Sean $v$ el módulo de la velocidad y $r$ el radio de la circunferencia.
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Aceleración: $\vec{a} = \vec{a_{c}} + \vec{a_{t}} \;$ donde:
+					\begin{itemize}
+						\item $\vec{a_{c}} = \frac{v^{2}}{r}$
+						\item $\abs{\vec{a_{c}}} = r\gamma = r \frac{d\omega}{dt} = r \ddot{\theta}$
+						\item $\vec{a_{t}} = \frac{d\vec{v_{t}}}{dt}$
+						\item $\abs{\vec{a_{t}}} = r\omega^{2} = r \dot{\theta^{2}}$
+					\end{itemize}
+				\item Velocidad angular: $\omega = \frac{v}{r} \; [\frac{rad}{sec}]$
+				\item Velocidad tangencial: $v_{t} = \omega r \; [\frac{mts}{sec}]$
+				\item Período: $T = \frac{2\pi}{\omega}$
+				\item Frecuencia: $f = \frac{1}{T}$
+			\end{itemize}
+		\end{multicols}
 
-	\section*{Práctico 4: Dinámica}
-		\begin{itemize}
-			\item
-		\end{itemize}
+		\subsubsection*{Ecuaciones de movimiento en coordenadas polares:}
+			\PN Sean $\hat{r} = \neg\hat{n}$ y $\hat{\theta} = \hat{t}$. Denotamos $\dot{r} = \frac{dr}{dt}$, $\dot{\theta} =
+				\frac{d\theta}{dt} = \omega$.
+			\begin{itemize}
+				\item \underline{Posición:} $\vec{r}(t) = r(t) \hat{r}$
+				\item \underline{Velocidad:} $\vec{v}(t) = \dot{r}(t) \hat{r} + r(t) \dot{\theta}(t) \hat{\theta}$
+				\item \underline{Aceleración:} $\vec{a}(t) = (\ddot{r}(t) - r(t) \dot{\theta}^{2}(t)) \hat{r} + (r(t)
+					\ddot{\theta}(t) + 2 \dot{r}(t) \dot{\theta}(t)) \hat{\theta}$
+			\end{itemize}
+
+	\section*{\underline{Práctico 4:} Dinámica}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Leyes de Newton:
+				\begin{enumerate}
+					\item $\sum_{i} \vec{F_{i}} = 0 \Rightarrow \vec{a} = 0$ y $\vec{v} = cte$
+					\item $\vec{F} = m \vec{a} \Rightarrow \sum \vec{F} = m \vec{a}$
+				\end{enumerate}
+				\item Fuerza gravitacional: $\vec{P} = m \vec{g}$
+				\item Fuerza de rozamiento: $\abs{\vec{F_{R}}} = \mu \abs{\vec{N}}$
+				\item Fuerza centrípeta: $\vec{F_{c}} = m \vec{a_{c}}$
+				\item Resortes: $F = k_{e} \Delta x$
+				\begin{itemize}
+					\item En paralelo: $k_{e} = \sum_{i} k_{i}$
+					\item En serie: $k_{e} = \frac{1}{\sum_{i} \frac{1}{k_{e}}}$
+				\end{itemize}
+			\end{itemize}
+		\end{multicols}
 \end{document}
