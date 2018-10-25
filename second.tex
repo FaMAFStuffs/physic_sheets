@@ -138,12 +138,135 @@
 				\end{itemize}
 			\end{itemize}
 		\end{multicols}
-		
+
 	\section*{\underline{Práctico 5:} Trabajo y Energía}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Trabajo: $W = \int_{pos_{i}}^{pos_{f}} \vec{F} d\vec{s}$
+				\item Trabajo: $W = F \Delta x$, $\; [W] = \frac{N}{m} = Joule$
+				\item Energía Cinética: $K = \frac{1}{2} m v^{2}$, $\; [K] = Joule$
+				\item Energía Potencial: $U = mgh$, $\; [U] = Joule$
+				\item Teorema de Energía-Trabajo:
+					\[
+						F \Delta x = \frac{1}{2} m v_{f}^{2} - \frac{1}{2} m v_{i}^{2}
+					\]
+				\item Conservación de la Energía: $E_{inicial} = E_{final}$, de otra forma $K_{i} + U_{i} = K_{f} + U_{f}$
+				\item Potencia: $\vec{P} = \vec{F} \cdot \vec{v}$, $\; [P] = \frac{J}{s} = Watt$
+				\item Potencia media: $\overline{P} = \frac{W}{\Delta t}$
+				\item Potencia instantanea: $P = \frac{dT}{dt}$
+			\end{itemize}
+		\end{multicols}
+
 	\section*{\underline{Práctico 6:} Momento Lineal y Angular}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Momento lineal: $\vec{p} = m \vec{v}$, $\; [\vec{p}] = [Kg] [\frac{m}{s}]$
+				\item Momento angular: $\vec{L} = \vec{r} \times \vec{p}$, $\; [\vec{L}] = \frac{Kg m^{2}}{s}$
+				\item Impulso: $\vec{J} = \Delta \vec{p} = \int_{t1}^{t2} \vec{F} dt$, $\; [\vec{p}] = [Kg] [\frac{m}{s}]$
+				\item Centro de masa: $\vec{r}_{CM} = \frac{m_{1}}{m_{1} + m_{2}} \vec{r_{1}} + \frac{m_{2}}{m_{1} + m_{2}}
+					\vec{r_{2}}$
+				\item Conservación del momento lineal: $\vec{p_{i}} = \vec{p_{v}}$
+				\item Conservación de la energía: $\frac{1}{2} m_{i} v_{i}^{2} = \frac{1}{2} m_{f} v_{f}^{2}$
+				\item Energía cinética rotacional: $K = \frac{1}{2} I \omega^{2}$, donde $I = m r^{2}$ (Momento de Inercia)
+				\item Momento de torsión (Torque): $\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times (m\vec{a})$, $\; [\vec{\tau}] = J$
+			\end{itemize}
+		\end{multicols}
+
 	\section*{\underline{Práctico 7:} Oscilaciones}
+		\begin{itemize}
+			\item
+			\item Ley de Hooke: $\vec{F} = k \Delta \vec{x}$
+			\item Trabajo realizado para estirar un resorte: $W_{e} = \frac{1}{2} k (\Delta l)^{2}$
+		\end{itemize}
+
+	\subsection{Partícula en movimiento armónico simple}
+		\PN La posición de un objeto actuando sobre una fuerza descrita por la \textit{Ley de Hooke} esta dada por:
+		\begin{equation}
+		\end{equation}
+
+		\PN donde A, $\omega$, son constantes y:
+		\begin{itemize}
+			\item Frecuencia angular: $\omega = \sqrt{\frac{k}{m}}$
+			\item Período del movimiento: $T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}}$
+			\item Frecuencia: $f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}}$
+			\item Posición: $x(t) = A \cos (\omega t)$
+			\item Velocidad: $v(t) = \frac{dx}{dt} = - \omega A \sin (\omega t)$
+			\item Aceleración: $a(t) = \frac{d^{2}x}{dt^{2}} = - \omega^{2} A \cos (\omega t)$
+		\end{itemize}
+
+	\subsection{Energía del oscilador armónico simple}
+		\PN \textbf{Energía cinética}
+		\begin{equation}
+			K = \frac{1}{2} m v^{2} = \frac{1}{2} m \omega^{2} A^{2} \sin^{2} (\omega t)
+		\end{equation}
+
+		\PN \textbf{Energía potencial}
+		\begin{equation}
+			U = \frac{1}{2} k x^{2} = \frac{1}{2} k A^{2} \cos^{2} (\omega t)
+		\end{equation}
+
+		\PN \textbf{Energía total}
+		\PN Dado que K y U siempre son cantidades positivas o cero. Puesto que $\omega^{2} = \frac{k}{m}$, la energía mecánica
+		total del oscilador armónico simple se expresa como:
+		\begin{eqnarray*}
+			E = \frac{1}{2} k A^{2}
+		\end{eqnarray*}
+
+	\subsection{Osciladores amortiguados}
+		\PN Se puede escribir la segunda ley de Newton como:
+		\begin{eqnarray*}
+			\Sigma \ F_{x} &=& -kx - \underbrace{b \overbrace{v}^{\text{coeficiente de amortiguamiento}}}_{\text{fuerza retardadora}} = ma_{x} \\
+			-kx - b \frac{dx}{dt} &=& m \frac{d^{2}x}{dt^{2}}
+		\end{eqnarray*}
+
+		\PN \textbf{Ecuación de la posición}
+		\begin{equation}
+			x(t) = A \mathrm{e}^{\frac{-b}{2m}t} \cos (\omega t)
+		\end{equation}
+
+		\PN donde la frecuencia angular de oscilación es:
+		\begin{equation}
+			\omega = \sqrt{\frac{k}{m} - \left(\frac{b}{2m}\right)^{2}}
+		\end{equation}
+
+		\PN Es conveniente expresar la frecuencia angular de un oscilador amortiguado en la forma:
+		\begin{equation}
+			\omega = \sqrt{\omega_{0} - \left(\frac{b}{2m}\right)^{2}}
+		\end{equation}
+
+		\PN donde $\omega_{0} = \sqrt{k/m}$ representa la frecuencia angular en ausencia de una fuerza retardadora (el
+		oscilador no amortiguado) y se llama \textbf{frecuencia natural} del sistema.
+
+		\pagebreak
+		\PN \textbf{Tipos de amortiguamiento}
+		\begin{itemize}
+			\item Subamortiguado: $\omega_{0} > \frac{b}{2m}$
+			\item Críticamente Amortiguado: $\omega_{0} = \frac{b}{2m}$
+			\item Sobreamortiguado: $\omega_{0} < \frac{b}{2m}$
+		\end{itemize}
+
+	\subsection{Oscilaciones forzadas}
+		\begin{itemize}
+			\item Posición: $x(t) = A \cos (\omega t)$
+			\item Velocidad: $v(t) = - \omega A \sin (\omega t)$
+			\item lalala	: $a(t) = - \omega^{2} A \cos (\omega t)$
+		\end{itemize}
+
 	\section*{\underline{Práctico 8:} Calor}
+		\begin{itemize}
+			\item
+		\end{itemize}
+
 	\section*{\underline{Práctico 9:} Electroestática}
+		\begin{itemize}
+			\item
+		\end{itemize}
+
 	\section*{\underline{Práctico 10:} Ley de Gauss. Circuitos}
-	\section*{\underline{Práctico 11:} Magnestismo}
+		\begin{itemize}
+			\item
+		\end{itemize}
+
+	\section*{\underline{Práctico 11:} Magnetismo}
+		TBD for final exam!!!
 \end{document}
