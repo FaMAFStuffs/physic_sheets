@@ -25,43 +25,6 @@
 		\large Agustín Curto
 	\end{center}
 
-	\section*{\underline{Práctico 0:} Vectores}
-		\PN $\vec{A} = A_{x} \hat{i} + A_{y} \hat{j} + A_{z} \hat{k}$, $\;$ $\vec{B} = B_{x} \hat{i} + B_{y} \hat{j} +
-			B_{z} \hat{k}$, $\;$ $\theta = \vec{A} \angle \vec{B}$, $\;$ $A = \abs{\vec{A}}, B = \abs{\vec{B}}$, $\alpha$.
-		\begin{multicols}{2}
-			\begin{itemize}
-				\item Suma: $\vec{A} + \vec{B} = (A_{x} + B_{x}) \hat{i} + (A_{y} + B_{y}) \hat{j} + (A_{z} + B_{z}) \hat{k}$
-				\item Resta: $\vec{A} - \vec{B} = (A_{x} - B_{x}) \hat{i} + (A_{y} - B_{y}) \hat{j} + (A_{z} - B_{z}) \hat{k}$
-				\item Multiplicación por un escalar: $\alpha A_{x} \hat{i} + \alpha A_{y} \hat{j} + \alpha A_{z} \hat{k}$
-				\item Producto escalar (punto): $\vec{A} \cdot \vec{B} = AB \cos(\theta)$
-				\item Producto vectorial (cruz):
-					\PN \underline{Forma 1:}
-					\[
-						\vec{A} \times \vec{B} = (A_{y}B_{z} - A_{z}B_{y}) \hat{i} + (A_{x}B_{z} - A_{z}B_{x}) \hat{j} +
-						(A_{x}B_{y} - A_{y}B_{x}) \hat{k}
-					\]
-
-					\PN \underline{Forma 2:}
-						\[
-							\vec{A} \times \vec{B} = det
-								\left(
-								  \begin{bmatrix}
-								    \hat{i} & \hat{j} & \hat{k} \\
-								    A_{x} & A_{y} & A_{z} \\
-								    B_{x} & B_{y} & B_{z}
-								  \end{bmatrix}
-								\right)
-						\]
-					\PN Además: $\abs{\vec{A} \times \vec{B}} = AB \sin(\theta)$
-				\item Representación polar:
-					\begin{eqnarray*}
-						a_{x} = r \cos(\theta) \\
-						a_{y} = r \sin(\theta) \\
-						r = \sqrt(a_{x}^{2} + a_{y}^{2})
-					\end{eqnarray*}
-			\end{itemize}
-		\end{multicols}
-
 	\section*{\underline{Práctico 1:} Cinemática}
 		\begin{multicols}{2}
 			\begin{itemize}
@@ -142,131 +105,138 @@
 	\section*{\underline{Práctico 5:} Trabajo y Energía}
 		\begin{multicols}{2}
 			\begin{itemize}
-				\item Trabajo: $W = \int_{pos_{i}}^{pos_{f}} \vec{F} d\vec{s}$
-				\item Trabajo: $W = F \Delta x$, $\; [W] = \frac{N}{m} = Joule$
-				\item Energía Cinética: $K = \frac{1}{2} m v^{2}$, $\; [K] = Joule$
-				\item Energía Potencial: $U = mgh$, $\; [U] = Joule$
+				\item Trabajo: $[W] = [\frac{N}{m}] = [J] \; (Joules)$
+					\begin{itemize}
+						\item $W = \int_{P_{i}}^{P_{f}} \vec{F} d\vec{s}$
+						\item $W = F \Delta x$
+					\end{itemize}
+				\item Energía Cinética: $K = \frac{1}{2} m v^{2}$, $\; [K] = [J]$
+				\item Energía Potencial: $U = mgh$, $\; [U] = [J]$
 				\item Teorema de Energía-Trabajo:
 					\[
 						F \Delta x = \frac{1}{2} m v_{f}^{2} - \frac{1}{2} m v_{i}^{2}
 					\]
-				\item Conservación de la Energía: $E_{inicial} = E_{final}$, de otra forma $K_{i} + U_{i} = K_{f} + U_{f}$
-				\item Potencia: $\vec{P} = \vec{F} \cdot \vec{v}$, $\; [P] = \frac{J}{s} = Watt$
-				\item Potencia media: $\overline{P} = \frac{W}{\Delta t}$
-				\item Potencia instantanea: $P = \frac{dT}{dt}$
+				\item Conservación de la Energía:
+					\begin{eqnarray*}
+						E_{inicial} &=& E_{final} \\
+						K_{i} + U_{i} &=& K_{f} + U_{f}
+					\end{eqnarray*}
+
+				\item Potencia: $[P] = [\frac{J}{s}] = [W] \; (Watt)$
+					\begin{itemize}
+						\item Potencia media: $\overline{P} = \frac{W}{\Delta t}$
+						\item Potencia instantanea: $\vec{P} = \frac{dT}{dt} = \vec{F} \cdot \vec{v}$
+					\end{itemize}
 			\end{itemize}
 		\end{multicols}
 
-	\section*{\underline{Práctico 6:} Momento Lineal y Angular}
+	\section*{\underline{Práctico 6:} Momento Lineal, Angular y de Torsión}
 		\begin{multicols}{2}
 			\begin{itemize}
-				\item Momento lineal: $\vec{p} = m \vec{v}$, $\; [\vec{p}] = [Kg] [\frac{m}{s}]$
-				\item Momento angular: $\vec{L} = \vec{r} \times \vec{p}$, $\; [\vec{L}] = \frac{Kg m^{2}}{s}$
-				\item Impulso: $\vec{J} = \Delta \vec{p} = \int_{t1}^{t2} \vec{F} dt$, $\; [\vec{p}] = [Kg] [\frac{m}{s}]$
+				\item Momento lineal: $\vec{p} = m \vec{v} \qquad [\vec{p}] = [\frac{kg \; m}{s}]$
+				\item Momento angular: $\vec{L} = \vec{r} \times \vec{p} \qquad [\vec{L}] = [\frac{Kg \; m^{2}}{s}]$
+				\item Impulso: $\vec{J} = \Delta \vec{p} = \int_{t1}^{t2} \vec{F} dt \qquad [\vec{p}] = [\frac{kg \; m}{s}]$
 				\item Centro de masa: $\vec{r}_{CM} = \frac{m_{1}}{m_{1} + m_{2}} \vec{r_{1}} + \frac{m_{2}}{m_{1} + m_{2}}
 					\vec{r_{2}}$
+				\item Choque plástico:
+					\begin{itemize}
+						\item Se conserva el momento
+						\item No se conserva la energía
+					\end{itemize}
+				\item Choque elástico:
+					\begin{itemize}
+						\item Se conserva el momento
+						\item Se conserva la energía
+					\end{itemize}
 				\item Conservación del momento lineal: $\vec{p_{i}} = \vec{p_{v}}$
 				\item Conservación de la energía: $\frac{1}{2} m_{i} v_{i}^{2} = \frac{1}{2} m_{f} v_{f}^{2}$
-				\item Energía cinética rotacional: $K = \frac{1}{2} I \omega^{2}$, donde $I = m r^{2}$ (Momento de Inercia)
-				\item Momento de torsión (Torque): $\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times (m\vec{a})$, $\; [\vec{\tau}] = J$
+				\item Energía cinética rotacional: $K = \frac{1}{2} I \omega^{2}$
+					\PN $I = m r^{2}$ (Momento de Inercia) $[I] = [Kg \; m^{2}]$
+				\item Momento de torsión (Torque):
+					\[
+						\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times (m\vec{a}) \qquad [\vec{\tau}] = J
+					\]
 			\end{itemize}
 		\end{multicols}
 
 	\section*{\underline{Práctico 7:} Oscilaciones}
 		\begin{itemize}
-			\item
 			\item Ley de Hooke: $\vec{F} = k \Delta \vec{x}$
 			\item Trabajo realizado para estirar un resorte: $W_{e} = \frac{1}{2} k (\Delta l)^{2}$
-		\end{itemize}
-
-	\subsection{Partícula en movimiento armónico simple}
-		\PN La posición de un objeto actuando sobre una fuerza descrita por la \textit{Ley de Hooke} esta dada por:
-		\begin{equation}
-		\end{equation}
-
-		\PN donde A, $\omega$, son constantes y:
-		\begin{itemize}
-			\item Frecuencia angular: $\omega = \sqrt{\frac{k}{m}}$
-			\item Período del movimiento: $T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}}$
-			\item Frecuencia: $f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}}$
-			\item Posición: $x(t) = A \cos (\omega t)$
-			\item Velocidad: $v(t) = \frac{dx}{dt} = - \omega A \sin (\omega t)$
-			\item Aceleración: $a(t) = \frac{d^{2}x}{dt^{2}} = - \omega^{2} A \cos (\omega t)$
-		\end{itemize}
-
-	\subsection{Energía del oscilador armónico simple}
-		\PN \textbf{Energía cinética}
-		\begin{equation}
-			K = \frac{1}{2} m v^{2} = \frac{1}{2} m \omega^{2} A^{2} \sin^{2} (\omega t)
-		\end{equation}
-
-		\PN \textbf{Energía potencial}
-		\begin{equation}
-			U = \frac{1}{2} k x^{2} = \frac{1}{2} k A^{2} \cos^{2} (\omega t)
-		\end{equation}
-
-		\PN \textbf{Energía total}
-		\PN Dado que K y U siempre son cantidades positivas o cero. Puesto que $\omega^{2} = \frac{k}{m}$, la energía mecánica
-		total del oscilador armónico simple se expresa como:
-		\begin{eqnarray*}
-			E = \frac{1}{2} k A^{2}
-		\end{eqnarray*}
-
-	\subsection{Osciladores amortiguados}
-		\PN Se puede escribir la segunda ley de Newton como:
-		\begin{eqnarray*}
-			\Sigma \ F_{x} &=& -kx - \underbrace{b \overbrace{v}^{\text{coeficiente de amortiguamiento}}}_{\text{fuerza retardadora}} = ma_{x} \\
-			-kx - b \frac{dx}{dt} &=& m \frac{d^{2}x}{dt^{2}}
-		\end{eqnarray*}
-
-		\PN \textbf{Ecuación de la posición}
-		\begin{equation}
-			x(t) = A \mathrm{e}^{\frac{-b}{2m}t} \cos (\omega t)
-		\end{equation}
-
-		\PN donde la frecuencia angular de oscilación es:
-		\begin{equation}
-			\omega = \sqrt{\frac{k}{m} - \left(\frac{b}{2m}\right)^{2}}
-		\end{equation}
-
-		\PN Es conveniente expresar la frecuencia angular de un oscilador amortiguado en la forma:
-		\begin{equation}
-			\omega = \sqrt{\omega_{0} - \left(\frac{b}{2m}\right)^{2}}
-		\end{equation}
-
-		\PN donde $\omega_{0} = \sqrt{k/m}$ representa la frecuencia angular en ausencia de una fuerza retardadora (el
-		oscilador no amortiguado) y se llama \textbf{frecuencia natural} del sistema.
-
-		\pagebreak
-		\PN \textbf{Tipos de amortiguamiento}
-		\begin{itemize}
-			\item Subamortiguado: $\omega_{0} > \frac{b}{2m}$
-			\item Críticamente Amortiguado: $\omega_{0} = \frac{b}{2m}$
-			\item Sobreamortiguado: $\omega_{0} < \frac{b}{2m}$
-		\end{itemize}
-
-	\subsection{Oscilaciones forzadas}
-		\begin{itemize}
-			\item Posición: $x(t) = A \cos (\omega t)$
-			\item Velocidad: $v(t) = - \omega A \sin (\omega t)$
-			\item lalala	: $a(t) = - \omega^{2} A \cos (\omega t)$
+			\item Oscilador Armónico Simple:
+				\begin{multicols}{2}
+					\begin{itemize}
+						\item Posición: $x(t) = A \cos (\omega t + \phi)$
+						\item Velocidad: $v(t) = - \omega A \sin (\omega t + \phi)$
+						\item Aceleración: $a(t) = - \omega^{2} A \cos (\omega t + \phi)$
+						\item Frecuencia angular: $\omega = \sqrt{\frac{k}{m}}$
+						\item Período del movimiento: $T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}}$
+						\item Frecuencia: $f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}}$
+						\item Valores máximos:
+							\begin{itemize}
+								\item $x_{max} = A$
+								\item $v_{max} = \omega A$
+								\item $a_{max} = \omega^{2}A$
+							\end{itemize}
+						\item Energía: $E = \frac{1}{2} k A^{2}$
+						\item Velocidad en función de la posición:
+							\[
+								v(x) = \pm \omega \sqrt{A^{2} - x^{2}}
+							\]
+					\end{itemize}
+				\end{multicols}
+			\item Oscilador Amortiguado
+				\begin{multicols}{2}
+					\begin{itemize}
+						\item $x(t) = A \mathrm{e}^{\frac{-b}{2m}t} \cos (\omega t)$
+						\item $\omega = \sqrt{\frac{k}{m} - \left(\frac{b}{2m}\right)^{2}} = \sqrt{\omega_{0} - \alpha^{2}}$
+						\item Tipos de amortiguamiento:
+						\begin{itemize}
+							\item Subamortiguado: $\omega_{0} > \alpha$
+							\item Sobreamortiguado: $\omega_{0} < \alpha$
+							\item Críticamente Amortiguado: $\omega_{0} = \alpha$
+						\end{itemize}
+					\end{itemize}
+				\end{multicols}
+			\item Oscilaciones forzadas
+				\begin{multicols}{3}
+					\begin{itemize}
+						\item $x(t) = A \cos (\omega t + \phi)$
+						\item $v(t) = - \omega A \sin (\omega t + \phi)$
+						\item $a(t) = - \omega^{2} A \cos (\omega t + \phi)$
+					\end{itemize}
+				\end{multicols}
 		\end{itemize}
 
 	\section*{\underline{Práctico 8:} Calor}
 		\begin{itemize}
-			\item
+			\item Celsius, Farenheit y Kelvin:
+				\begin{multicols}{2}
+					\begin{itemize}
+						\item $T_{C} = T_{K} - 273.15$
+						\item $T_{F} = \frac{9}{5} T_{C} + 32$
+					\end{itemize}
+				\end{multicols}
+			\item Expansión térmica. $\alpha$, coeficiente de expanción.
+				\begin{multicols}{3}
+					\begin{itemize}
+						\item 1D: $ \Delta L = \alpha L_{i} \Delta T$
+						\item 2D: $ \Delta A = 2\alpha A_{i} \Delta T$
+						\item 3D: $ \Delta V = 3\alpha V_{i} \Delta T$
+					\end{itemize}
+				\end{multicols}
+			\item Calor: $Q = C \Delta T = cm \Delta T \qquad [Q] = J$.
+			\item Calorias-Joules: $1 [cal] = 4.186 [J]$
+			\item Calor latente: $Q = L \Delta m$
+				\begin{itemize}
+					\item Fusión: $Q = L_{F} \Delta m$, $\qquad$ para el agua: $L_{F} = 80 [\frac{cal}{gr}]$
+					\item Vaporización: $Q = L_{V} \Delta m$, $\qquad$ para el agua: $L_{V} = 540 [\frac{cal}{gr}]$
+				\end{itemize}
+			\item Transferencia de calor:
 		\end{itemize}
 
 	\section*{\underline{Práctico 9:} Electroestática}
 		\begin{itemize}
 			\item
 		\end{itemize}
-
-	\section*{\underline{Práctico 10:} Ley de Gauss. Circuitos}
-		\begin{itemize}
-			\item
-		\end{itemize}
-
-	\section*{\underline{Práctico 11:} Magnetismo}
-		TBD for final exam!!!
 \end{document}
