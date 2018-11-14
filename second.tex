@@ -26,6 +26,44 @@
 		\large Agustín Curto
 	\end{center}
 
+	\section*{\underline{Práctico 0:} Vectores}
+		\PN Sean $\vec{A} = A_{x} \hat{i} + A_{y} \hat{j} + A_{z} \hat{k}$, $\;$ $\vec{B} = B_{x} \hat{i} + B_{y} \hat{j} +
+			B_{z} \hat{k}$, $\;$ $\theta = \vec{A} \angle \vec{B}$, $\;$ $A$ y $B$ los módulos de $\vec{A}, \vec{B}$
+			respectivamente y $\alpha$ un escalar.
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Suma: $\vec{A} + \vec{B} = (A_{x} + B_{x}) \hat{i} + (A_{y} + B_{y}) \hat{j} + (A_{z} + B_{z}) \hat{k}$
+				\item Resta: $\vec{A} - \vec{B} = (A_{x} - B_{x}) \hat{i} + (A_{y} - B_{y}) \hat{j} + (A_{z} - B_{z}) \hat{k}$
+				\item Multiplicación por un escalar: $\alpha A_{x} \hat{i} + \alpha A_{y} \hat{j} + \alpha A_{z} \hat{k}$
+				\item Producto escalar (punto): $\vec{A} \cdot \vec{B} = AB \cos(\theta)$
+				\item Producto vectorial (cruz):
+					\PN \underline{Forma 1:}
+					\[
+						\vec{A} \times \vec{B} = (A_{y}B_{z} - A_{z}B_{y}) \hat{i} + (A_{x}B_{z} - A_{z}B_{x}) \hat{j} +
+						(A_{x}B_{y} - A_{y}B_{x}) \hat{k}
+					\]
+
+					\PN \underline{Forma 2:}
+						\[
+							\vec{A} \times \vec{B} = det
+								\left(
+									\begin{bmatrix}
+										\hat{i} & \hat{j} & \hat{k} \\
+										A_{x} & A_{y} & A_{z} \\
+										B_{x} & B_{y} & B_{z}
+									\end{bmatrix}
+								\right)
+						\]
+					\PN Además: $\abs{\vec{A} \times \vec{B}} = AB \sin(\theta)$
+				\item Representación polar:
+					\begin{eqnarray*}
+						a_{x} = r \cos(\theta) \\
+						a_{y} = r \sin(\theta) \\
+						r = \sqrt(a_{x}^{2} + a_{y}^{2})
+					\end{eqnarray*}
+			\end{itemize}
+		\end{multicols}
+
 	\section*{\underline{Práctico 1:} Cinemática}
 		\begin{multicols}{2}
 			\begin{itemize}
@@ -33,17 +71,19 @@
 				\item Aceleración media: $\overline{a} = \frac{\Delta v}{\Delta t}$
 			\end{itemize}
 		\end{multicols}
-		\begin{multicols}{3}
-			\begin{itemize}
-				\item $x(t) = x_{0} + v_{0} t + \frac{a}{2} t^{2}$
-				\item $v(t) = v_{0} + at$
-				\item $a = cte$
-			\end{itemize}
-		\end{multicols}
+
+		\subsubsection*{Ecuaciones de movimiento:}
+			\begin{multicols}{3}
+				\begin{itemize}
+					\item \underline{Posición:} $x(t) = x_{0} + v_{0} t + \frac{a}{2} t^{2}$
+					\item \underline{Velocidad:} $v(t) = v_{0} + at$
+					\item \underline{Aceleración:} $a = cte$
+				\end{itemize}
+			\end{multicols}
 
 	\section*{\underline{Práctico 2:} Movimiento en el plano}
 		\begin{itemize}
-			\item Trayectoria: $y(x)$.
+			\item Trayectoria: Dadas $x(t)$ y $y(t)$, la ecuación de la trayectoria es $y(x)$.
 		\end{itemize}
 
 		\subsubsection*{Ecuaciones de movimiento:}
@@ -54,7 +94,7 @@
 			\end{itemize}
 
 	\section*{\underline{Práctico 3:} Movimiento circular}
-		\PN $v = \abs{\vec{v}}$
+		\PN Sean $v$ el módulo de la velocidad y $r$ el radio de la circunferencia.
 		\begin{multicols}{2}
 			\begin{itemize}
 				\item Aceleración: $\vec{a} = \vec{a_{c}} + \vec{a_{t}} \;$ donde:
@@ -73,7 +113,7 @@
 		\end{multicols}
 
 		\subsubsection*{Ecuaciones de movimiento en coordenadas polares:}
-			\PN $\hat{r} = \neg\hat{n}$, $\hat{\theta} = \hat{t}$. $\dot{r} = \frac{dr}{dt}$, $\dot{\theta} =
+			\PN Sean $\hat{r} = \neg\hat{n}$ y $\hat{\theta} = \hat{t}$. Denotamos $\dot{r} = \frac{dr}{dt}$, $\dot{\theta} =
 				\frac{d\theta}{dt} = \omega$.
 			\begin{itemize}
 				\item \underline{Posición:} $\vec{r}(t) = r(t) \hat{r}$
@@ -104,10 +144,13 @@
 	\section*{\underline{Práctico 5:} Trabajo y Energía}
 		\begin{multicols}{2}
 			\begin{itemize}
-				\item Trabajo: $[W] = [\frac{N}{m}] = [J] \; (Joules)$
+				\item Trabajo: $[W] = [Nm] = [J] \; (Joules)$. $\theta$ ángulo entre la fuerza y la dirección de movimiento.
 					\begin{itemize}
-						\item $W = \int_{P_{i}}^{P_{f}} \vec{F} d\vec{s}$
-						\item $W = F \Delta x$
+						\item Si $F$ no es constante:
+							\[
+								W = \int_{P_{i}}^{P_{f}} \vec{F}(x) \cos(\theta)d\vec{x}
+							\]
+						\item Si $F$ es constante: $W = F \Delta x \cos(\theta)$
 					\end{itemize}
 				\item Energía Cinética: $K = \frac{1}{2} m v^{2}$, $\; [K] = [J]$
 				\item Energía Potencial: $U = mgh$, $\; [U] = [J]$
@@ -137,7 +180,7 @@
 				\item Impulso: $\vec{J} = \Delta \vec{p} = \int_{t1}^{t2} \vec{F} dt \qquad [\vec{p}] = [\frac{kg \; m}{s}]$
 				\item Centro de masa: $\vec{r}_{CM} = \frac{m_{1}}{m_{1} + m_{2}} \vec{r_{1}} + \frac{m_{2}}{m_{1} + m_{2}}
 					\vec{r_{2}}$
-				\item Choque plástico:
+				\item Choque plástico: $\not \exists \vec{F}_{ext}$
 					\begin{itemize}
 						\item Se conserva el momento
 						\item No se conserva la energía
@@ -153,7 +196,7 @@
 					\PN $I = m r^{2}$ (Momento de Inercia) $[I] = [Kg \; m^{2}]$
 				\item Momento de torsión (Torque):
 					\[
-						\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times (m\vec{a}) \qquad [\vec{\tau}] = J
+						\vec{\tau} = \vec{r} \times \vec{F} = \vec{r} \times (m\vec{a}) \qquad [\vec{\tau}] = Nm
 					\]
 			\end{itemize}
 		\end{multicols}
@@ -161,7 +204,7 @@
 	\section*{\underline{Práctico 7:} Oscilaciones}
 		\begin{itemize}
 			\item Ley de Hooke: $\vec{F} = k \Delta \vec{x}$
-			\item Trabajo realizado para estirar un resorte: $W_{e} = \frac{1}{2} k (\Delta l)^{2}$
+			\item Trabajo realizado para estirar un resorte: $W_{e} = \frac{1}{2} k (\Delta x)^{2}$
 			\item Oscilador Armónico Simple:
 				\begin{multicols}{2}
 					\begin{itemize}
@@ -169,6 +212,9 @@
 						\item Velocidad: $v(t) = - \omega A \sin (\omega t + \phi)$
 						\item Aceleración: $a(t) = - \omega^{2} A \cos (\omega t + \phi)$
 						\item Frecuencia angular: $\omega = \sqrt{\frac{k}{m}}$
+							\begin{itemize}
+								\item Péndulo: $\omega = \sqrt{\frac{g}{l}}$
+							\end{itemize}
 						\item Período del movimiento: $T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}}$
 						\item Frecuencia: $f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}}$
 						\item Valores máximos:
@@ -178,6 +224,12 @@
 								\item $a_{max} = \omega^{2}A$
 							\end{itemize}
 						\item Energía: $E = \frac{1}{2} k A^{2}$
+							\begin{multicols}{2}
+								\begin{itemize}
+									\item $K = \frac{1}{2} m v^{2}$
+									\item $U = \frac{1}{2} k x^{2}$
+								\end{itemize}
+							\end{multicols}
 						\item Velocidad en función de la posición:
 							\[
 								v(x) = \pm \omega \sqrt{A^{2} - x^{2}}
@@ -224,25 +276,25 @@
 						\item 3D: $ \Delta V = 3\alpha V_{i} \Delta T$
 					\end{itemize}
 				\end{multicols}
-			\item Calor: $Q = C \Delta T = cm \Delta T \qquad [Q] = J$.
+			\item Calor: $Q = C \Delta T = cm \Delta T \qquad [Q] = J, \qquad [c] = [\frac{cal}{grºC}]$
 			\item Calorias-Joules: $1 [cal] = 4.186 [J]$
 			\item Calor latente: $Q = L \Delta m$
 				\begin{itemize}
-					\item Fusión: $Q = L_{F} \Delta m$, $\qquad$ para el agua: $L_{F} = 80 [\frac{cal}{gr}]$
-					\item Vaporización: $Q = L_{V} \Delta m$, $\qquad$ para el agua: $L_{V} = 540 [\frac{cal}{gr}]$
+					\item Fusión: $Q = L_{F} \Delta m$, $\qquad$ para el agua: $L_{F} = 80 [\frac{cal}{gr}] \; @ \; 0ºC$
+					\item Vaporización: $Q = L_{V} \Delta m$, $\qquad$ para el agua: $L_{V} = 540 [\frac{cal}{gr}] \; @ \; 100ºC$
 				\end{itemize}
 			\item Transferencia de calor: k: coef. de conducción térmica, A: superficie de contacto, L: longitud del cuerpo de
 				contacto.
 				\begin{itemize}
 					\item Conducción: $P = \frac{Q}{t} = \frac{kA}{L} (T_{desde} - T_{hasta})$
-					\item Resistencia térmica: $R_{T} = \frac{\Delta L}{kA}$
+					\item Resistencia térmica: $R_{T} = \frac{\Delta L}{kA} \qquad [R] = [\frac{m^{2}K}{W}]$
 					\item Convección libre: $P = \frac{Q}{t} = h A (T - T_{0}) \qquad$ h: coef. de convección
 					\item Radiación: $P = \frac{Q}{t} = \sigma \epsilon A (T^{4} - T_{0}^{4}) \qquad \sigma = \SI{1e-10}{}
 						[\frac{W}{m^{2} \; K^{4}}]$
 				\end{itemize}
 			\item Ley de OHM Térmica:
 				\[
-					P = \frac{Q}{t} = \frac{\Delta}{R_{T}} = \frac{kA \Delta T}{\Delta L}
+					P = \frac{Q}{t} = \frac{\Delta T}{R_{T}} = \frac{kA \Delta T}{\Delta L}
 				\]
 		\end{itemize}
 
@@ -252,20 +304,28 @@
 				\item Ley de Coulomb: $k = \frac{1}{4 \pi \epsilon_{0}} = \SI{9e9}{} [\frac{N \; m^{2}}{C^{2}}] $,
 					$\epsilon_{0} = \SI{8.85e-12}{} [\frac{C^{2}}{N \; m^{2}}]$
 					\[
-						\vec{F}_{12} = \frac{k q_{1} q_{2}}{r^{2}} \hat{r}_{12}
+						\vec{F}_{12} = \frac{k \abs{q_{1}} \abs{q_{2}}}{r^{2}} \hat{r}_{12}
 					\]
 				\item Electrón:
 					\begin{itemize}
 						\item masa: $\SI{9.11e-31}{} [Kg]$
 						\item carga: $- \SI{1.60217e-19}{} [C]$
 					\end{itemize}
-				\item Campo eléctrico: $\vec{E}_{q_{1}}(r) = \frac{k \; q_{2}}{r^{2}} \hat{r} \qquad [\vec{E}] = [\frac{N}{C}]$
+				\item $\mu C = C$: $1 [\mu C] = \SI{1e-6}{}[C]$
+				\item Campo eléctrico: $\vec{E}_{q_{1}}(r) = \frac{k\abs{q_{2}}}{r^{2}} \hat{r} \qquad [\vec{E}] = [\frac{N}{C}]$
 				\item Fuerza en un campo eléctrico: $\vec{F} = q \vec{E}$
-				\item Campo eléctrico en un punto $P$: $\vec{E} = k \sum_{i} \frac{q_{i}}{r_{i}} \hat{r_{i}}$
+				\item Campo eléctrico en un punto $P$:
+					\[
+						\vec{E} = k \sum_{i} \frac{\abs{q_{i}}}{r^{2}_{i}} \hat{r_{i}}
+					\]
 				\item Distribución lineal de carga: $\vec{E} = \frac{\lambda}{2\pi\epsilon_{0}}$
 				\item Dipolo de $\vec{E}$: $\vec{\tau} = \vec{p} \times \vec{E}$
 				\item Flujo eléctrico: $\Phi = \oint \vec{E} \vec{dA} \qquad [\Phi] = [\frac{N\; m^{2}}{C}]$
-				\item Ley de Gauss: $\epsilon_{0} \Phi = q$
+				\item Ley de Gauss:
+					\[
+						\epsilon_{0} \Phi = q_{neta}
+					\]
+					\PN $q_{neta}$: carga neta dentro de la superficie
 				\item $\vec{E}$ sobre una superficie conductora:
 					\[
 						E = \frac{\sigma}{\epsilon_{0}}
@@ -277,7 +337,7 @@
 						\item $\Delta V = V_{B} - V_{A} = \frac{W_{AB}}{q} = - \int_{A}^{B} \vec{E} \vec{ds}$
 					\end{itemize}
 					\[
-						V(r) = \frac{q}{kr} \qquad [V] = [\frac{J}{C}] \; (Voltios)
+						V(r) = \frac{kq}{r} \qquad [V] = [\frac{J}{C}] \; (Voltios)
 					\]
 			\end{itemize}
 		\end{multicols}
